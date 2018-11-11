@@ -10,10 +10,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.sql.*;
 import examizfp.MySQLAccess;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import TableControllers.MateriasController;
+import Models.Materia;
+import java.util.ArrayList;
 /**
  *
  * @author santiago
@@ -34,14 +36,11 @@ public class ExamizFP extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args)  {
-        
-            MySQLAccess dao = new MySQLAccess();
-        try {
-            dao.readDataBase("select * from Examiz.Materia");
-        } catch (Exception ex) {
-            Logger.getLogger(ExamizFP.class.getName()).log(Level.SEVERE, null, ex);
+        ArrayList<Materia> mat = MateriasController.getMaterias();
+        for (Materia materia : mat) { 
+            System.out.println(materia.getName());
         }
-
+        System.out.println("Went through loop");
         launch(args);
     }
     

@@ -15,7 +15,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MySQLAccess {
     private Connection connect = null;
@@ -23,7 +26,7 @@ public class MySQLAccess {
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
-    public void readDataBase(String sqlquery) throws Exception {
+    public ResultSet readDataBase(String sqlquery) throws Exception {
         try {
             // This will load the MySQL driver, each DB has its own driver
             Class.forName("com.mysql.jdbc.Driver");
@@ -36,38 +39,26 @@ public class MySQLAccess {
             // Result set get the result of the SQL query
             resultSet = statement
                     .executeQuery(sqlquery);
-            writeResultSet(resultSet);
-         
 
         } catch (Exception e) {
             throw e;
-        } finally {
-            close();
-        }
-
+        };
+        return resultSet;
     }
 
-    private void writeMetaData(ResultSet resultSet) throws SQLException {
-        //  Now get some metadata from the database
-        // Result set get the result of the SQL query
-
-        System.out.println("The columns in the table are: ");
-
-        System.out.println("Table: " + resultSet.getMetaData().getTableName(1));
-        for  (int i = 1; i<= resultSet.getMetaData().getColumnCount(); i++){
-            System.out.println("Column " +i  + " "+ resultSet.getMetaData().getColumnName(i));
-        }
-    }
-
-    private void writeResultSet(ResultSet resultSet) throws SQLException {
-        // ResultSet is initially before the first data set
-        while (resultSet.next()) {
-            // It is possible to get the columns via name
-            // also possible to get the columns via the column number
-            // which starts at 1
-            // e.g. resultSet.getSTring(2);
-            String name = resultSet.getString("MNombre");
-            System.out.println("Nombre: " + name);
+    private void writeResultSet(ResultSet resultSet) {
+        try {
+            // ResultSet is initially before the first data set
+            while (resultSet.next()) {
+                // It is possible to get the columns via name
+                // also possible to get the columns via the column number
+                // which starts at 1
+                // e.g. resultSet.getSTring(2);
+                String name = resultSet.getString("MNombre");
+                System.out.println("Nombre: " + name);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLAccess.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
