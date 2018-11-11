@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #027882;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox layoutX="300.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Materia" style="-fx-font-size: 26;" AnchorPane.bottomAnchor="575.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="75.0" />
+      <ComboBox layoutX="300.0" layoutY="206.0" promptText="Tema" style="-fx-font-size: 26;" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="200.0" />
+      <Button layoutX="1202.0" layoutY="14.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 30;" text="X">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TextField layoutX="300.0" layoutY="337.0" prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="345.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="325.0" />
+      <Label layoutX="300.0" layoutY="297.0" text="Pregunta">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField layoutX="300.0" layoutY="396.0" prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="400.0" />
+      <Label layoutX="300.0" layoutY="374.0" text="Respuestas">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField layoutX="300.0" layoutY="437.0" prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="435.0" />
+      <TextField layoutX="300.0" layoutY="465.0" prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="470.0" />
+      <TextField layoutX="300.0" layoutY="500.0" prefHeight="50.0" prefWidth="680.0" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="505.0" />
+      <Button layoutX="867.0" layoutY="589.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="107.0" text="Agregar">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
