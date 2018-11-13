@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #027882;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examizfp.Interface3Controller">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #027882;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examizfp.agregarPreguntaController">
    <children>
       <ComboBox layoutX="300.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Materia" style="-fx-font-size: 26;" AnchorPane.bottomAnchor="575.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="75.0" />
       <ComboBox layoutX="300.0" layoutY="206.0" promptText="Tema" style="-fx-font-size: 26;" AnchorPane.bottomAnchor="450.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="200.0" />
-      <Button fx:id="exit" layoutX="1202.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadInterface2" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 30;" text="X">
+      <Button fx:id="exit" layoutX="1202.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadHome" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 30;" text="X">
          <font>
             <Font size="19.0" />
          </font>

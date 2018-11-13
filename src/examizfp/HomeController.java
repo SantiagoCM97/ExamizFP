@@ -18,9 +18,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 /**
  *
- * @author EnriqueVilla
+ * @author Esteban Torres
  */
-public class Interface2Controller implements Initializable {
+public class HomeController implements Initializable {
     
     @FXML
     private AnchorPane rootPane;
@@ -57,11 +57,11 @@ public class Interface2Controller implements Initializable {
     }
     
     @FXML
-    private void loadInterface3(ActionEvent event) throws IOException {
+    private void loadAgregarPregunta(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
         stage = (Stage) button.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("interface3.fxml"));
+        root = FXMLLoader.load(getClass().getResource("agregarPregunta.fxml"));
         rootPane.getChildren().setAll(root);
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -69,11 +69,11 @@ public class Interface2Controller implements Initializable {
     }
     
     @FXML
-    private void loadInterface4(ActionEvent event) throws IOException {
+    private void loadGeneraExamen(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
         stage = (Stage) button.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("interface4.fxml"));
+        root = FXMLLoader.load(getClass().getResource("examen.fxml"));
         rootPane.getChildren().setAll(root);
         Scene scene = new Scene(root);
         stage.setScene(scene);

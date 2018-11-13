@@ -20,7 +20,7 @@ import javafx.stage.Stage;
  *
  * @author EnriqueVilla
  */
-public class Interface3Controller implements Initializable {
+public class agregarPreguntaController implements Initializable {
     
     @FXML
     private AnchorPane rootPane;
@@ -33,11 +33,11 @@ public class Interface3Controller implements Initializable {
     }
     
     @FXML
-    private void loadInterface2(ActionEvent event) throws IOException {
+    private void loadHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
         stage = (Stage) exit.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("interface2.fxml"));
+        root = FXMLLoader.load(getClass().getResource("home.fxml"));
         rootPane.getChildren().setAll(root);
         Scene scene = new Scene(root);
         stage.setScene(scene);

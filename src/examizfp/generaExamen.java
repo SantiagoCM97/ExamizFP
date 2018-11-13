@@ -18,9 +18,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 /**
  *
- * @author EnriqueVilla
+ * @author Esteban Torres
  */
-public class Interface4Controller implements Initializable {
+public class generaExamen implements Initializable {
     
     @FXML
     private AnchorPane rootPane;
@@ -33,11 +33,11 @@ public class Interface4Controller implements Initializable {
     }
     
     @FXML
-    private void loadInterface2(ActionEvent event) throws IOException {
+    private void loadHome(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
         stage = (Stage) button.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("interface2.fxml"));
+        root = FXMLLoader.load(getClass().getResource("home.fxml"));
         rootPane.getChildren().setAll(root);
         Scene scene = new Scene(root);
         stage.setScene(scene);
