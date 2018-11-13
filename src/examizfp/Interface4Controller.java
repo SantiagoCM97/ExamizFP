@@ -16,17 +16,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-        
 /**
  *
- * @author EstebanTorres
+ * @author EnriqueVilla
  */
-public class LoginController implements Initializable {
+public class Interface4Controller implements Initializable {
     
     @FXML
     private AnchorPane rootPane;
     @FXML
-    private javafx.scene.control.Button Login;
+    private javafx.scene.control.Button button;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -34,10 +33,10 @@ public class LoginController implements Initializable {
     }
     
     @FXML
-    private void loadSecond(ActionEvent event) throws IOException {
+    private void loadInterface2(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        stage = (Stage) Login.getScene().getWindow();
+        stage = (Stage) button.getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("interface2.fxml"));
         rootPane.getChildren().setAll(root);
         Scene scene = new Scene(root);
